@@ -646,8 +646,99 @@ body {
   line-height: 1.6;
 }
 
+/* ─── REVIEW (교육후기) ─── */
+.review-subtitle { font-size: 12.5px; color: var(--text-muted); line-height: 1.7; margin: -6px 0 14px; }
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left-width: 3px;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(28,40,60,0.03);
+}
+.review-tagline { font-size: 11px; font-weight: 700; color: var(--blue-mid); background: #eef4fb; display: inline-block; border-radius: 5px; padding: 3px 7px; margin-bottom: 9px; }
+.review-text {
+  font-size: 13.5px; color: #333; line-height: 1.7;
+  margin-bottom: 12px; position: relative; padding-left: 4px;
+}
+.review-text::before {
+  content: '\201C';
+  color: var(--gold); font-size: 22px; font-weight: 900;
+  margin-right: 2px; font-family: Georgia, serif;
+  line-height: 0.4; vertical-align: -4px;
+}
+.review-author { display: flex; align-items: center; gap: 10px; }
+.review-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 13px; font-weight: 700; flex-shrink: 0;
+}
+.review-meta .name { font-size: 13px; font-weight: 700; color: #1a1a1a; line-height: 1.3; }
+.review-meta .org { font-size: 11px; color: #999; margin-top: 1px; }
+
+/* ─── WHY (교육 필요성·특성) ─── */
+.why-section {
+  background: linear-gradient(160deg, #ffffff 0%, #f2f7fc 100%);
+  border: 1px solid #d5e2ee;
+  border-radius: 12px;
+  padding: 22px 20px 20px;
+  margin-bottom: 26px;
+}
+.why-eyebrow {
+  display: inline-block;
+  font-size: 11px; font-weight: 800; letter-spacing: 0;
+  color: #a8862f;
+  background: rgba(201,168,76,0.13);
+  border: 1px solid rgba(201,168,76,0.38);
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+}
+.why-headline {
+  font-size: 20px; font-weight: 800; line-height: 1.45;
+  color: var(--blue-dark); letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.why-lead { font-size: 13px; line-height: 1.8; color: var(--text-muted); margin-bottom: 18px; }
+.why-lead strong { color: var(--blue-mid); font-weight: 700; }
+.why-quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.why-quote {
+  position: relative; overflow: hidden;
+  background: #e9f1f8; border: 1px solid #d8e6f1;
+  border-radius: 10px; padding: 16px 14px 14px;
+}
+.why-quote::before {
+  content: '\201C';
+  position: absolute; top: 2px; right: 10px;
+  font-family: Georgia, serif; font-size: 44px; font-weight: 700;
+  color: #c9dced; line-height: 1;
+}
+.why-quote h4 { position: relative; z-index: 1; font-size: 13px; font-weight: 700; color: var(--blue-dark); line-height: 1.55; margin-bottom: 6px; }
+.why-quote p { position: relative; z-index: 1; font-size: 12px; color: var(--text-muted); line-height: 1.65; }
+.why-bridge {
+  text-align: center; font-size: 13px; font-weight: 600; color: var(--blue-dark);
+  background: var(--white); border: 1px dashed var(--blue-light);
+  border-radius: 10px; padding: 12px 14px; margin-bottom: 18px; line-height: 1.6;
+}
+.why-bridge strong { color: var(--blue-mid); border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
+.why-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.why-feature {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px;
+}
+.why-feature .fi { font-size: 19px; line-height: 1; margin-top: 2px; }
+.why-feature h4 { font-size: 13px; font-weight: 700; color: var(--blue-dark); margin-bottom: 4px; }
+.why-feature p { font-size: 12px; color: var(--text-muted); line-height: 1.65; }
+@media (max-width: 640px) {
+  .why-quote-grid, .why-feature-grid { grid-template-columns: 1fr; }
+  .why-headline { font-size: 17px; }
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 480px) {
+  .why-section { padding: 18px 15px 16px; }
   .hero { padding: 28px 16px 22px; }
   .hero-meta { grid-template-columns: 1fr; gap: 8px; }
   .content { padding: 16px 12px 50px; }
@@ -666,7 +757,7 @@ body {
       <span>2026</span> 지역R&amp;D 기획 실무 과정
     </div>
     <h1 class="hero-title">지역R&amp;D 기획 실무 과정<br>참가안내문</h1>
-    <p class="hero-subtitle">과학기술정보통신부 &nbsp;·&nbsp; 국가과학기술인력개발원 &nbsp;·&nbsp; 연구개발특구진흥재단</p>
+    <p class="hero-subtitle">과학기술정보통신부 &nbsp;·&nbsp; 국가과학기술인력개발원</p>
     <div class="hero-tags">
       <span class="hero-tag">#예산대응전략</span>
       <span class="hero-tag">#데이터기반R&amp;D분석</span>
@@ -699,7 +790,7 @@ body {
     <button class="tab-btn active" onclick="switchTab('overview')">📋 과정개요</button>
     <button class="tab-btn" onclick="switchTab('schedule')">🗓 교육일정</button>
     <button class="tab-btn" onclick="switchTab('access')">🚌 교통 및 시설 안내</button>
-    <button class="tab-btn" onclick="switchTab('info')">📌 참가안내</button>
+    <button class="tab-btn" onclick="switchTab('info')">📌 참가안내 및 후기</button>
     <button class="tab-btn" onclick="switchTab('register')">✅ 수강신청</button>
   </div>
 </nav>
@@ -709,6 +800,58 @@ body {
 
   <!-- ── TAB: 과정개요 ── -->
   <div id="tab-overview" class="tab-panel active">
+
+    <!-- 교육 필요성 · 특성 -->
+    <div class="why-section">
+      <div class="why-eyebrow">왜 이 교육을 들어야 할까요?</div>
+      <div class="why-headline">이제 지역은 스스로 현안과 수요를 파악해서 R&amp;D 사업을 발굴·설계해야 합니다.</div>
+      <p class="why-lead">
+        그러나 현장에서는 "무엇을, 어떤 근거로, 누구와 함께 기획할 것인가"라는 질문 앞에서 막히곤 합니다.
+      </p>
+
+      <div class="why-quote-grid">
+        <div class="why-quote">
+          <h4>정책·예산 구조가 바뀌었다는데<br>우리 지역은 뭘 준비해야 하지?</h4>
+          <p>바뀐 정책 흐름과 예산 구조를 읽고 국비 확보 방향을 세우는 힘이 필요합니다.</p>
+        </div>
+        <div class="why-quote">
+          <h4>기획의 근거를 데이터로<br>보여달라는데, 어떻게 분석하지?</h4>
+          <p>지역 R&amp;D 데이터 수집부터 AI를 활용한 현황 분석까지, 방법론을 알아야 합니다.</p>
+        </div>
+        <div class="why-quote">
+          <h4>다른 지역과 협력형 R&amp;D 사업은<br>어떻게 짜야 하지?</h4>
+          <p>초광역 R&amp;D 사업 예산을 확보하기 위한 사업 설계가 필요합니다.</p>
+        </div>
+      </div>
+
+      <div class="why-bridge">
+        이 과정은 세 가지 질문에 대한 답을 <strong>'권역별 협력형 R&amp;D 사업 설계(안)'</strong>이라는 손에 잡히는 결과물로 만들어 드립니다.
+      </div>
+
+      <div class="why-feature-grid">
+        <div class="why-feature">
+          <span class="fi">🧭</span>
+          <div>
+            <h4>정책 변화 · 예산 대응 전략</h4>
+            <p>지역R&amp;D 정책 변화와 국비 확보 방향을 이해하고, 기획의 방향을 선제적으로 설정합니다.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <span class="fi">📊</span>
+          <div>
+            <h4>AI 활용 데이터 기반 분석</h4>
+            <p>AI 도구를 활용해 권역별 R&amp;D 환경·산업·기술 현황을 분석하고 기획의 근거를 마련합니다.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <span class="fi">✍️</span>
+          <div>
+            <h4>실습 + 전문가 피드백</h4>
+            <p>조별토론·모의실습으로 협력형 R&amp;D 사업설명자료 요약본을 도출해 전문가 피드백으로 고도화합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 주요 공지 -->
     <div class="alert-section">
@@ -744,7 +887,6 @@ body {
     <div class="info-card">
       <ul class="objective-list">
         <li class="objective-item">
-
           지역 R&amp;D 정책 변화를 이해하고, 데이터 기반 R&amp;D 분석을 바탕으로 '지역주도 협력형 R&amp;D 사업' 기획(안)을 도출한다.
         </li>
       </ul>
@@ -758,7 +900,7 @@ body {
     <div class="info-card">
       <div class="info-row">
         <span class="info-label">대상</span>
-        <span class="info-value">연구개발지원단, (연지단 담당)지자체 공무원, 지역R&amp;D 연구기관 재직자 등 / 25명</span>
+        <span class="info-value">연구개발지원단 업무 담당자, 지역R&amp;D 연구기관 재직자 등, 25명</span>
       </div>
       <div class="info-row">
         <span class="info-label">기간</span>
@@ -774,32 +916,11 @@ body {
       </div>
       <div class="info-row">
         <span class="info-label">주관</span>
-        <span class="info-value">과학기술정보통신부, 국가과학기술인력개발원, 연구개발특구진흥재단</span>
+        <span class="info-value">과학기술정보통신부, 국가과학기술인력개발원</span>
       </div>
     </div>
     <div class="note-box" style="margin-top:10px;">
       ※ 세금계산서 발행 문의 : <a href="tel:043-251-7044" style="color:var(--blue-mid);">043-251-7044</a> / <a href="mailto:hykim@kird.re.kr" style="color:var(--blue-mid);">hykim@kird.re.kr</a>
-    </div>
-
-    <!-- 이 교육은요 -->
-    <div class="section-hd">
-      <h2>✨ 2026년 지역R&amp;D 기획 실무 과정은요!</h2>
-      <div class="section-hd-line"></div>
-    </div>
-    <div class="info-card" style="background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%); border-color:#4a8bc4;">
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <span style="font-size:20px;">⭐</span>
-          <div style="font-size:13px;line-height:1.6;color:var(--blue-dark);"><strong>지역R&amp;D 정책 변화와 예산 대응 전략부터 AI를 활용한 데이터 기반 R&amp;D 분석까지</strong><br>지역R&amp;D 기획 실무에 꼭 필요한 핵심 역량을 한번에 익힐 수 있는 교육입니다.</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <span style="font-size:20px;">🤝</span>
-          <div style="font-size:13px;line-height:1.6;color:var(--blue-dark);"><strong>조별토론과 모의실습</strong>을 통해 권역별 협력형 R&amp;D 사업 설계(안)을 직접 도출하고,<br>전문가 피드백으로 사업 기획을 고도화하는 실습형 교육으로 진행됩니다.</div>
-        </div>
-        <div style="text-align:center;padding:10px;background:rgba(255,255,255,0.7);border-radius:8px;font-size:13px;font-weight:600;color:var(--blue-mid);">
-          "지역이 주도하는 협력형 R&amp;D, 기획의 첫걸음을 함께 시작하세요"
-        </div>
-      </div>
     </div>
 
   </div>
@@ -852,7 +973,7 @@ body {
         <div class="schedule-time">15:30~17:30<div class="schedule-min">120분</div></div>
         <div class="schedule-body">
           <div class="schedule-title">데이터 기반 R&amp;D 현황 분석 <span class="schedule-tag" style="background:#e8f4f6;color:#0c4a5e;">생성형 AI 활용</span></div>
-          <div class="schedule-desc">• AI를 활용한 지역 R&amp;D 현황 분석 방법<br>• 권역별 R&amp;D 환경 분석 및 기획 포인트 도출</div>
+          <div class="schedule-desc">• AI를 활용한 지역 R&amp;D 현황 분석 방법<br>• R&amp;D 사업 기획보고서 작성 시 고려해야 할 중요 포인트</div>
         </div>
       </div>
       <div class="schedule-row meal">
@@ -870,8 +991,8 @@ body {
       <div class="schedule-row">
         <div class="schedule-time">9:00~12:00<div class="schedule-min">150분</div></div>
         <div class="schedule-body">
-          <div class="schedule-title">권역별 협력형 R&amp;D 사업 설계 <span class="schedule-tag" style="background:#fdf6e3;color:#6b4c00;">조별토론/모의실습</span></div>
-          <div class="schedule-desc">• 문제정의 및 권역 현안과 기회∙제약요인 도출<br>• 지역 현안∙수요 해결을 위한 협력형 R&amp;D 사업 설계(안) 도출</div>
+          <div class="schedule-title">예산 확보를 위한 R&amp;D 사업 설계(안) 작성 실습 <span class="schedule-tag" style="background:#fdf6e3;color:#6b4c00;">조별토론/모의실습</span></div>
+          <div class="schedule-desc">• 문제정의 및 권역 현안과 기회∙제약요인 도출<br>• 지역 현안∙수요 해결을 위한 협력형 R&amp;D 사업설명자료 요약본 도출</div>
         </div>
       </div>
       <div class="schedule-row meal">
@@ -1082,6 +1203,54 @@ body {
       </div>
     </div>
 
+
+    <!-- 교육후기 -->
+    <div class="section-hd">
+      <h2>💬 교육후기</h2>
+      <div class="section-hd-line"></div>
+    </div>
+    <p class="review-subtitle">이전 기수 교육생들의 한 줄 후기입니다.</p>
+
+    <div class="review-card" style="border-left-color:#2c5f8a;">
+      <div class="review-tagline">데이터 기반 R&amp;D 현황 분석</div>
+      <div class="review-text">데이터 활용 기반 사업기획이 중요하다는 것을 인식하게 되었고, 그 과정에서 생성형 AI를 어떻게 활용하고 분석해야 하는지 새롭게 알게 되었음.</div>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#2c5f8a;">A</div>
+        <div class="review-meta">
+          <div class="name">A 연구원</div>
+          <div class="org">부산연구개발지원단(BISTEP)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card" style="border-left-color:#c9a84c;">
+      <div class="review-tagline">지역R&amp;D 정책환경 이해</div>
+      <div class="review-text">부처의 최신 정책 방향을 토대로, 공모사업 계획 수립 등 실질적인 내용과 노하우를 알 수 있었음.</div>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#c9a84c;">B</div>
+        <div class="review-meta">
+          <div class="name">B 주무관</div>
+          <div class="org">충남도청</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card" style="border-left-color:#2d7a4f;">
+      <div class="review-tagline">사업 설계 방향 도출</div>
+      <div class="review-text">지역R&amp;D 사업 추진 시, 사업 필요성 및 논리 구성에 도움되는 기획 방법론과 작성 팁을 많이 얻어서 유익했음.</div>
+      <div class="review-author">
+        <div class="review-avatar" style="background:#2d7a4f;">C</div>
+        <div class="review-meta">
+          <div class="name">C 연구원</div>
+          <div class="org">충북과학기술혁신원</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:10px;">
+      ※ 상기 후기는 이전 기수 교육생 설문 응답을 발췌한 것으로, 성명은 비공개 처리하였습니다.
+    </div>
+
   </div>
 
   <!-- ── TAB: 수강신청 ── -->
@@ -1189,7 +1358,7 @@ body {
     <div class="disclaimer">
       본 안내문의 내용은 추후 변경될 수 있습니다.<br>
       최신 정보는 <a href="https://alpha-campus.kr" target="_blank" style="color:var(--blue-mid);">알파캠퍼스</a>를 통해 확인하시기 바랍니다.<br><br>
-      주관: <strong>과학기술정보통신부</strong> &nbsp;·&nbsp; <strong>국가과학기술인력개발원(KIRD)</strong> &nbsp;·&nbsp; <strong>연구개발특구진흥재단</strong>
+      주관: <strong>과학기술정보통신부</strong> &nbsp;·&nbsp; <strong>국가과학기술인력개발원(KIRD)</strong>
     </div>
 
   </div>
